@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RuntimeTextTemplate1.tt</DependentUpon>
     </Compile>
+    <Compile Include="RuntimeTextTemplate1\tt\TransformText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

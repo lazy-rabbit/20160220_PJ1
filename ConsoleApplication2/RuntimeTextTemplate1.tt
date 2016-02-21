@@ -4,7 +4,10 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 
-<#  for (int i =0; i<10; i++)     {  #>
-<# 
-    Console.WriteLine("   目前時間:" + DateTime.Now.ToString());  #>
+<#  for (int i =0; i<10; i++) #>
+<#{
+     
+#>
+
+    目前時間:<#= DateTime.Now.ToString()#>
 <#   }   #>

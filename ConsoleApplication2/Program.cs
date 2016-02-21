@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ConsoleApplication1;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,12 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
+
+            //var tt = new RuntimeTextTemplate1.tt.TransformText();
+            //throw new Exception(tt);
+            //Console.WriteLine(tt);
+
+
             var tt = "123";
     ////[條件式註解語法]
     //‪#‎if‬ DEBUG && STAGE
@@ -25,18 +33,31 @@ namespace ConsoleApplication2
 
             Trace.WriteLine("Start");
 
-            Debug.Assert(tt == "123", "Assert");
+            Debug.Assert(tt == "133", "Assert");
             
 
             Trace.TraceInformation("--->TraceInformation");
             Trace.TraceWarning("--->TraceWarning");
             Trace.TraceError("--->TraceError");
-                      
+
 
             //Debug.Fail();
 
+
+
+            //ConsoleTraceListener textLogListener = new ConsoleTraceListener();
+            //Trace.Listeners.Add(textLogListener);
+
+            TextWriterTraceListener tr1 = new TextWriterTraceListener(System.Console.Out);
+            Debug.Listeners.Add(tr1);
+
+            TextWriterTraceListener tr2 = new TextWriterTraceListener(File.CreateText("Out.txt"));
+            Debug.Listeners.Add(tr2);
+
             DoSomething(tt);
             //throw new Exception(tt);
+
+
 
             Debug.WriteLine("END");
 
