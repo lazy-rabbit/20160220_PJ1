@@ -23,6 +23,9 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Test' ">
     <OutputPath>bin\Test\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == '2333' ">
+    <OutputPath>bin\2333\</OutputPath>
+  </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
     <Content Include="UMLUseCaseDiagram1.usecasediagram">

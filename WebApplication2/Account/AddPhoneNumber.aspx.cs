@@ -20,11 +20,11 @@ namespace WebApplication2.Account
                 };
 
 
-                var message = new IdentityMessage
-                {
-                    Destination = PhoneNumber.Text,
-                    Body = "您的安全密碼為" + code
-                };
+                //var message = new IdentityMessage
+                //{
+                //    Destination = PhoneNumber.Text,
+                //    Body = "您的安全密碼為" + code
+                //};
 
                 manager.SmsService.Send(message);
             }
